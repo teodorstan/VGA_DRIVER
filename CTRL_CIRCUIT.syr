@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: CTRL_CIRCUIT.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -149,8 +149,8 @@ Analyzing hierarchy for module <CMP> in library <work> with parameters.
 Analyzing top module <CTRL_CIRCUIT>.
 	h_width = 32'sb00000000000000000000000001110111
 	v_width = 32'sb00000000000000000000000000000101
-WARNING:Xst:2211 - "ipcore_dir/COUNTER.v" line 40: Instantiating black box module <COUNTER>.
-WARNING:Xst:2211 - "ipcore_dir/COUNTER2.v" line 64: Instantiating black box module <COUNTER2>.
+WARNING:Xst:2211 - "ipcore_dir/COUNTER.v" line 23: Instantiating black box module <COUNTER>.
+WARNING:Xst:2211 - "ipcore_dir/COUNTER2.v" line 47: Instantiating black box module <COUNTER2>.
 Module <CTRL_CIRCUIT> is correct for synthesis.
  
     Set user-defined property "SYN_BLACK_BOX =  1" for instance <horiz_counter> in unit <CTRL_CIRCUIT>.
@@ -392,14 +392,14 @@ WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to vert_count
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.53 secs
+Total CPU time to Xst completion: 4.44 secs
  
 --> 
 
 
-Total memory usage is 513644 kilobytes
+Total memory usage is 513796 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

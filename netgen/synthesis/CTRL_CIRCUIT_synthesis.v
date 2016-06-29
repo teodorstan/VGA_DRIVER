@@ -7,14 +7,14 @@
 // \   \   \/     Version: P.20131013
 //  \   \         Application: netgen
 //  /   /         Filename: CTRL_CIRCUIT_synthesis.v
-// /___/   /\     Timestamp: Wed Jun 29 16:19:52 2016
+// /___/   /\     Timestamp: Thu Jun 30 01:19:11 2016
 // \   \  /  \ 
 //  \___\/\___\
 //             
 // Command	: -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim CTRL_CIRCUIT.ngc CTRL_CIRCUIT_synthesis.v 
 // Device	: xc3s500e-5-fg320
 // Input file	: CTRL_CIRCUIT.ngc
-// Output file	: /home/student/VGA_DRIVER/netgen/synthesis/CTRL_CIRCUIT_synthesis.v
+// Output file	: /home/g1ndac/Workplace/Verilog/VGA_DRIVER/netgen/synthesis/CTRL_CIRCUIT_synthesis.v
 // # of Modules	: 1
 // Design Name	: CTRL_CIRCUIT
 // Xilinx        : /opt/Xilinx/14.7/ISE_DS/ISE/

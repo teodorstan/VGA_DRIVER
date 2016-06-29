@@ -1,0 +1,5 @@
+set -tmpdir "/home/g1ndac/Workplace/Verilog/VGA_DRIVER/xst/projnav.tmp"
+set -xsthdpdir "/home/g1ndac/Workplace/Verilog/VGA_DRIVER/xst"
+elaborate
+-ifn Filter.prj
+-ifmt mixed

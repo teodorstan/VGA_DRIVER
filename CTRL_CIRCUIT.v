@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    14:21:00 06/29/2016 
-// Design Name: 
-// Module Name:    CTRL_CIRCUIT 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module CTRL_CIRCUIT(
 	input PIX_CLK,
 	output HS,
@@ -34,6 +16,7 @@ wire HS_w;
 wire [9 : 0] vc_w;
 wire latch_set_v;
 wire latch_reset_v;
+wire [10:0] vc_w_c;
 
 assign HS = HS_w;
 
@@ -67,14 +50,17 @@ COUNTER2 vert_counter (
   .q(vc_w)
 );
 
+assign vc_w_c = {1'b0 , vc_w};
+
 CMP zero_detect_vs(
-	.in({0 , vc_w}),
+	.in(vc_w_c),
 	.out(latch_set_v)
 	);
 	
+	
 CMP #( .toCompare(v_width)) vs_det
 (
-		.in({0 , vc_w}),
+		.in(vc_w_c),
 		.out(latch_reset_v)
 );
 
@@ -83,8 +69,5 @@ LATCH vc_latch(
 	.reset(latch_reset_v),
 	.q(VS)
 );
-
-
-
 
 endmodule

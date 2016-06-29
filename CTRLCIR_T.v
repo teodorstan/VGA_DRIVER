@@ -40,7 +40,7 @@ module CTRLCIR_T;
 	
 	initial begin 
 	PIX_CLK = 0;
-	forever #1 PIX_CLK = ~PIX_CLK;
+	forever #20 PIX_CLK = ~PIX_CLK;
 	end
 	
       
