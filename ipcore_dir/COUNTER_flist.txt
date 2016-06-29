@@ -1,0 +1,17 @@
+# Output products list for <COUNTER>
+COUNTER/doc/c_counter_binary_v11_0_readme.txt
+COUNTER/doc/c_counter_binary_v11_0_vinfo.html
+COUNTER/doc/ds215_counter.pdf
+COUNTER.asy
+COUNTER.gise
+COUNTER.ngc
+COUNTER.sym
+COUNTER.v
+COUNTER.veo
+COUNTER.xco
+COUNTER.xise
+COUNTER_flist.txt
+COUNTER_xmdf.tcl
+_xmsgs/pn_parser.xmsgs
+core_resources.txt
+gui_latency.txt

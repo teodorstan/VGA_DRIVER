@@ -1,0 +1,5 @@
+set -tmpdir "/home/student/VGA_DRIVER/xst/projnav.tmp"
+set -xsthdpdir "/home/student/VGA_DRIVER/xst"
+elaborate
+-ifn LATCH.prj
+-ifmt mixed

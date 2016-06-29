@@ -1,0 +1,17 @@
+# Output products list for <vertic_counter>
+_xmsgs/pn_parser.xmsgs
+core_resources.txt
+gui_latency.txt
+vertic_counter/doc/c_counter_binary_v11_0_readme.txt
+vertic_counter/doc/c_counter_binary_v11_0_vinfo.html
+vertic_counter/doc/ds215_counter.pdf
+vertic_counter.asy
+vertic_counter.gise
+vertic_counter.ngc
+vertic_counter.sym
+vertic_counter.v
+vertic_counter.veo
+vertic_counter.xco
+vertic_counter.xise
+vertic_counter_flist.txt
+vertic_counter_xmdf.tcl
