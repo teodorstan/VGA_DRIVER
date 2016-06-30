@@ -46,6 +46,7 @@
 <<<<<<< HEAD
     <transform xil_pn:end_ts="1467279416" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1467279416">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1467279416" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5835316023778682711" xil_pn:start_ts="1467279416">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -78,6 +79,8 @@
     <transform xil_pn:end_ts="1467279419" xil_pn:in_ck="5351199033971308606" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-2757087139592769757" xil_pn:start_ts="1467279416">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="CTRL_CIRCUIT.ngr"/>
 =======
@@ -117,7 +120,6 @@
       <outfile xil_pn:name="TOP_VGA.prj"/>
       <outfile xil_pn:name="TOP_VGA.syr"/>
       <outfile xil_pn:name="TOP_VGA.xst"/>
-      <outfile xil_pn:name="TOP_VGA_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
@@ -126,6 +128,8 @@
     <transform xil_pn:end_ts="1467279419" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1262981241618522578" xil_pn:start_ts="1467279419">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
     </transform>
 =======
 >>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117

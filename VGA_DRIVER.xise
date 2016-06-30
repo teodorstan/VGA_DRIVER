@@ -64,6 +64,9 @@
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
 >>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
     </file>
+    <file xil_pn:name="VGA_CONSTR.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="36"/>
+    </file>
     <file xil_pn:name="ipcore_dir/COUNTER.xise" xil_pn:type="FILE_COREGENISE">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
