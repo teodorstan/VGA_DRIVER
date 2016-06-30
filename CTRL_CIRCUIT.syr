@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: CTRL_CIRCUIT.prj
@@ -392,12 +392,12 @@ WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to vert_count
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.44 secs
+Total CPU time to Xst completion: 3.81 secs
  
 --> 
 
 
-Total memory usage is 513796 kilobytes
+Total memory usage is 520600 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    6 (   0 filtered)
