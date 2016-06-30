@@ -25,16 +25,16 @@ module FRAMEBUFFER(
 	input [9:0] HC_I,
 	input [9:0] VC_I, 
 	input [7:0] PIX_COLOR,
-	output reg [7:0] PIXEL_DATA
+	output [7:0] PIXEL_DATA
     );
 	 
 parameter HSIZE = 800;
 parameter VSIZE = 600;
 
-reg [7:0] VRAM [0:HSIZE*VSIZE-1];
+/*reg [7:0] VRAM [0:HSIZE*VSIZE-1];
 
 always@(posedge PIXEL_CLK) begin
-	if (HC_I > 799 || VC > 599) 
+	if (HC_I > 799 || VC_I > 599) 
 		PIXEL_DATA <= 0;
 	else 
 		PIXEL_DATA <= VRAM[VC_I * HSIZE + HC_I];
@@ -43,4 +43,7 @@ end
 always@(posedge PIXEL_CLK) begin 
 	VRAM[PIX_VERTICAL * HSIZE + PIX_HORIZONTAL] <= PIX_COLOR;
 end
+*/
+
+assign PIXEL_DATA = PIX_COLOR;
 endmodule
