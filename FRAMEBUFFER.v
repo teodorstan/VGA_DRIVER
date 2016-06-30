@@ -34,7 +34,7 @@ parameter VSIZE = 600;
 reg [7:0] VRAM [0:HSIZE*VSIZE-1];
 
 always@(posedge PIXEL_CLK) begin
-	if (HC_I > 799 || VC > 599) 
+	if (HC_I > 799 || VC_I > 599) 
 		PIXEL_DATA <= 0;
 	else 
 		PIXEL_DATA <= VRAM[VC_I * HSIZE + HC_I];
