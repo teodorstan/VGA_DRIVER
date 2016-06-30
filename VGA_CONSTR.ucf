@@ -11,3 +11,12 @@ net Blue[1] loc = U4;
 
 net HSYNC loc = T4;
 net VSYNC loc = U3;
+
+net PIX_COLOR[0] loc = G18;
+net PIX_COLOR[1] loc = H18;
+net PIX_COLOR[2] loc = K18;
+net PIX_COLOR[3] loc = K17;
+net PIX_COLOR[4] loc = L14;
+net PIX_COLOR[5] loc = L13;
+net PIX_COLOR[6] loc = N17;
+net PIX_COLOR[7] loc = R17;
