@@ -21,9 +21,12 @@
 module LATCH(
 	input reset,
 	input set,
-	output q
+	output reg q
     );
 
-assign q = ! (set && !reset);
+	always@(set, reset)begin
+	if(set) q = 0;
+	else if(reset) q = 1;
+	end
 
 endmodule

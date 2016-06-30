@@ -9,29 +9,38 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Jun 29 18:52:56 2016
+Mapped Date    : Thu Jun 30 15:58:09 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    2
 Logic Utilization:
-  Number of Slice Flip Flops:            40 out of   9,312    1%
-  Number of 4 input LUTs:                51 out of   9,312    1%
+  Total Number Slice Registers:          22 out of   9,312    1%
+    Number used as Flip Flops:           21
+    Number used as Latches:               1
+  Number of 4 input LUTs:                19 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             35 out of   4,656    1%
-    Number of Slices containing only related logic:      35 out of      35 100%
-    Number of Slices containing unrelated logic:          0 out of      35   0%
+  Number of occupied Slices:             21 out of   4,656    1%
+    Number of Slices containing only related logic:      21 out of      21 100%
+    Number of Slices containing unrelated logic:          0 out of      21   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          51 out of   9,312    1%
-  Number of bonded IOBs:                  3 out of     232    1%
+  Total Number of 4 input LUTs:          38 out of   9,312    1%
+    Number used as logic:                19
+    Number used as a route-thru:         19
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 19 out of     232    8%
+    IOB Latches:                          2
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.91
+Average Fanout of Non-Clock Nets:                2.34
 
-Peak Memory Usage:  580 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  611 MB
+Total REAL time to MAP completion:  1 secs 
+Total CPU time to MAP completion:   1 secs 
 
 NOTES:
 
@@ -72,14 +81,15 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_h is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_v is sourced by
+   a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network vert_counter/blk00000001/sig00000010 has no load.
-INFO:LIT:395 - The above info message is repeated 1 more times for the following
-   (max. 5 shown):
-   horiz_counter/wrapper/blk00000001/sig00000029
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -87,52 +97,15 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   8 block(s) removed
    2 block(s) optimized away
-   8 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
-The trimmed logic report below shows the logic removed from your design due to
-sourceless or loadless signals, and VCC or ground connections.  If the removal
-of a signal or symbol results in the subsequent removal of an additional signal
-or symbol, the message explaining that second removal will be indented.  This
-indentation will be repeated as a chain of related logic is removed.
-
-To quickly locate the original cause for the removal of a chain of logic, look
-above the place where that logic is listed in the trimming report, then locate
-the lines that are least indented (begin at the leftmost edge).
-
-The signal "vert_counter/blk00000001/sig00000004" is sourceless and has been
-removed.
- Sourceless block "vert_counter/blk00000001/blk0000001c" (FF) removed.
-  The signal "vert_counter/blk00000001/sig00000010" is sourceless and has been
-removed.
-The signal "horiz_counter/wrapper/blk00000001/sig0000000e" is sourceless and has
-been removed.
- Sourceless block "horiz_counter/wrapper/blk00000001/blk00000007" (FF) removed.
-  The signal "horiz_counter/wrapper/blk00000001/sig00000029" is sourceless and has
-been removed.
-The signal "horiz_counter/wrapper/blk00000001/sig00000030" is sourceless and has
-been removed.
- Sourceless block "horiz_counter/wrapper/blk00000001/blk00000008" (FF) removed.
-  The signal "horiz_counter/wrapper/blk00000001/sig00000028" is sourceless and has
-been removed.
-   Sourceless block "horiz_counter/wrapper/blk00000001/blk0000002f" (ROM) removed.
-    The signal "horiz_counter/wrapper/blk00000001/sig00000013" is sourceless and has
-been removed.
-     Sourceless block "horiz_counter/wrapper/blk00000001/blk00000024" (ROM) removed.
-     Sourceless block "horiz_counter/wrapper/blk00000001/blk00000025" (ROM) removed.
-The signal "horiz_counter/wrapper/blk00000001/sig00000012" is sourceless and has
-been removed.
-Unused block "horiz_counter/wrapper/blk00000001/blk00000030" (ROM) removed.
-Unused block "vert_counter/blk00000001/blk0000001a" (MUX) removed.
-
 Optimized Block(s):
 TYPE 		BLOCK
-VCC 		horiz_counter/wrapper/blk00000001/blk00000002
-GND 		vert_counter/blk00000001/blk00000002
+GND 		XST_GND
+VCC 		XST_VCC
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
@@ -144,9 +117,25 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Blue<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Blue<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Green<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Green<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Green<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
 | PIX_CLK                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| PIX_DATA<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<3>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<4>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<5>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<6>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| PIX_DATA<7>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| Red<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Red<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Red<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

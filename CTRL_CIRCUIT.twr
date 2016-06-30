@@ -40,25 +40,30 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock PIX_CLK to Pad
-------------+------------+------------------+--------+
-            | clk (edge) |                  | Clock  |
-Destination |   to PAD   |Internal Clock(s) | Phase  |
-------------+------------+------------------+--------+
-HS          |    8.960(R)|PIX_CLK_BUFGP     |   0.000|
-VS          |    9.395(R)|PIX_CLK_BUFGP     |   0.000|
-------------+------------+------------------+--------+
-
 Clock to Setup on destination clock PIX_CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-PIX_CLK        |    3.641|         |         |         |
+PIX_CLK        |    3.893|         |         |         |
 ---------------+---------+---------+---------+---------+
 
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+PIX_DATA<0>    |Red<0>         |    4.244|
+PIX_DATA<1>    |Red<1>         |    4.253|
+PIX_DATA<2>    |Red<2>         |    4.268|
+PIX_DATA<3>    |Green<0>       |    4.270|
+PIX_DATA<4>    |Green<1>       |    4.284|
+PIX_DATA<5>    |Green<2>       |    4.284|
+PIX_DATA<6>    |Blue<0>        |    4.292|
+PIX_DATA<7>    |Blue<1>        |    4.284|
+---------------+---------------+---------+
 
-Analysis completed Wed Jun 29 18:53:17 2016 
+
+Analysis completed Thu Jun 30 15:58:20 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

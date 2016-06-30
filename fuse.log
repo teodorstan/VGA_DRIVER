@@ -1,50 +1,30 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/student/VGA_DRIVER/CTRLCIR_T_isim_beh.exe -prj /home/student/VGA_DRIVER/CTRLCIR_T_beh.prj work.CTRLCIR_T work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/student/VGA_DRIVER/TestCTRl_isim_beh.exe -prj /home/student/VGA_DRIVER/TestCTRl_beh.prj TestCTRl work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/student/VGA_DRIVER/ipcore_dir/COUNTER.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/ipcore_dir/COUNTER2.v" into library work
-WARNING:HDLCompiler:687 - "/home/student/VGA_DRIVER/ipcore_dir/COUNTER2.v" Line 452: Illegal redeclaration of module <glbl>.
+Analyzing Verilog file "/home/student/VGA_DRIVER/VERT_CNT.v" into library work
 Analyzing Verilog file "/home/student/VGA_DRIVER/LATCH.v" into library work
+Analyzing Verilog file "/home/student/VGA_DRIVER/HORIZ_CNT.v" into library work
 Analyzing Verilog file "/home/student/VGA_DRIVER/CMP.v" into library work
 Analyzing Verilog file "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/CTRLCIR_T.v" into library work
+Analyzing Verilog file "/home/student/VGA_DRIVER/TestCTRl.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
-WARNING:HDLCompiler:687 - "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" Line 5: Illegal redeclaration of module <glbl>.
 Starting static elaboration
-WARNING:HDLCompiler:327 - "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" Line 71: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" Line 77: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:189 - "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" Line 71: Size mismatch in connection of port <in>. Formal port size is 11-bit while actual signal size is 42-bit.
-WARNING:HDLCompiler:189 - "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" Line 77: Size mismatch in connection of port <in>. Formal port size is 11-bit while actual signal size is 42-bit.
 Completed static elaboration
-Fuse Memory Usage: 95412 KB
-Fuse CPU Usage: 840 ms
-Compiling module LUT3_D(INIT=8'b10000000)
-Compiling module INV
-Compiling module LUT3(INIT=8'b01111000)
-Compiling module LUT4(INIT=16'b1000000000001000)
-Compiling module FDR(INIT=1'b1)
-Compiling module LUT2(INIT=4'b1000)
-Compiling module FDE
-Compiling module FD
-Compiling module VCC
-Compiling module COUNTER
+Fuse Memory Usage: 94636 KB
+Fuse CPU Usage: 930 ms
+Compiling module HORIZ_CNT
 Compiling module CMP
-Compiling module CMP(toCompare=119)
 Compiling module LATCH
-Compiling module XORCY
-Compiling module MUXCY
-Compiling module GND
-Compiling module COUNTER2
-Compiling module CMP(toCompare=5)
+Compiling module VERT_CNT
 Compiling module CTRL_CIRCUIT
-Compiling module CTRLCIR_T
+Compiling module TestCTRl
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 13 sub-compilation(s) to finish...
-Compiled 41 Verilog Units
-Built simulation executable /home/student/VGA_DRIVER/CTRLCIR_T_isim_beh.exe
-Fuse Memory Usage: 655732 KB
-Fuse CPU Usage: 920 ms
-GCC CPU Usage: 870 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 Verilog Units
+Built simulation executable /home/student/VGA_DRIVER/TestCTRl_isim_beh.exe
+Fuse Memory Usage: 654844 KB
+Fuse CPU Usage: 940 ms
+GCC CPU Usage: 250 ms

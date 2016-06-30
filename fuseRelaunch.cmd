@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/student/VGA_DRIVER/CTRLCIR_T_isim_beh.exe" -prj "/home/student/VGA_DRIVER/CTRLCIR_T_beh.prj" "work.CTRLCIR_T" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/student/VGA_DRIVER/TestCTRl_isim_beh.exe" -prj "/home/student/VGA_DRIVER/TestCTRl_beh.prj" "TestCTRl" "work.glbl" 

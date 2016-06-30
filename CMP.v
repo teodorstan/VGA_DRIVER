@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CMP(
 	input [10:0] in,
+	input [10:0] toCompare,
 	output out
     );
 
-parameter toCompare = 0;
+
 
 assign out = (in == toCompare);
 

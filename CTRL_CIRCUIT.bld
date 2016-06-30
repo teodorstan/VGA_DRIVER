@@ -5,10 +5,7 @@ Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc3s500e-fg320-5
 CTRL_CIRCUIT.ngc CTRL_CIRCUIT.ngd
 
-Reading NGO file "/home/g1ndac/Workplace/Verilog/VGA_DRIVER/CTRL_CIRCUIT.ngc"
-...
-Loading design module "ipcore_dir/COUNTER2.ngc"...
-Loading design module "ipcore_dir/COUNTER.ngc"...
+Reading NGO file "/home/student/VGA_DRIVER/CTRL_CIRCUIT.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,10 +26,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 392136 kilobytes
+Total memory usage is 391348 kilobytes
 
 Writing NGD file "CTRL_CIRCUIT.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   2 sec
+Total REAL time to NGDBUILD completion:  1 sec
+Total CPU time to NGDBUILD completion:   1 sec
 
 Writing NGDBUILD log file "CTRL_CIRCUIT.bld"...

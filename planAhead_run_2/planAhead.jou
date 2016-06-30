@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Jun 30 14:03:26 2016
+# Process ID: 4541
+# Log file: /home/student/VGA_DRIVER/planAhead_run_2/planAhead.log
+# Journal file: /home/student/VGA_DRIVER/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/student/VGA_DRIVER/pa.fromNetlist.tcl

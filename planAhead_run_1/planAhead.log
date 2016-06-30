@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Jun 30 14:03:21 2016
+# Process ID: 4497
+# Log file: /home/student/VGA_DRIVER/planAhead_run_1/planAhead.log
+# Journal file: /home/student/VGA_DRIVER/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -335 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/student/VGA_DRIVER/pa.fromNetlist.tcl
+# create_project -name VGA_DRIVER -dir "/home/student/VGA_DRIVER/planAhead_run_2" -part xc3s500efg320-5
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/student/VGA_DRIVER/TOP_VGA.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/student/VGA_DRIVER} {ipcore_dir} }
+# add_files [list {ipcore_dir/COUNTER2.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/COUNTER.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "VGA_CONSTR.ucf" [current_fileset -constrset]
+Adding file '/home/student/VGA_DRIVER/VGA_CONSTR.ucf' to fileset 'constrs_1'
+# add_files [list {VGA_CONSTR.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s500efg320-5
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design TOP_VGA.ngc ...
+WARNING:NetListWriters:298 - No output is written to TOP_VGA.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file TOP_VGA.edif ...
+ngc2edif: Total memory usage is 103668 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/TOP_VGA_ngc_de11bde9.edif]
+Finished Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/TOP_VGA_ngc_de11bde9.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design COUNTER2.ngc ...
+WARNING:NetListWriters:298 - No output is written to COUNTER2.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file COUNTER2.edif ...
+ngc2edif: Total memory usage is 104064 kilobytes
+
+Reading core file '/home/student/VGA_DRIVER/ipcore_dir/COUNTER2.ngc' for (cell view 'COUNTER2', library 'TOP_VGA_lib', file 'TOP_VGA.ngc')
+Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/COUNTER2_ngc_addb1252.edif]
+Finished Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/COUNTER2_ngc_addb1252.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design COUNTER.ngc ...
+WARNING:NetListWriters:298 - No output is written to COUNTER.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file COUNTER.edif ...
+ngc2edif: Total memory usage is 104088 kilobytes
+
+Reading core file '/home/student/VGA_DRIVER/ipcore_dir/COUNTER.ngc' for (cell view 'COUNTER', library 'TOP_VGA_lib', file 'TOP_VGA.ngc')
+Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/COUNTER_ngc_addb1252.edif]
+Finished Parsing EDIF File [./planAhead_run_2/VGA_DRIVER.data/cache/COUNTER_ngc_addb1252.edif]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s500e/fg320/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2729.902 ; gain = 53.387
+INFO: [Common 17-344] 'link_design' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See /home/student/VGA_DRIVER/planAhead_pid4497.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Jun 30 14:03:57 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

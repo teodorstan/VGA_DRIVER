@@ -31,6 +31,12 @@ module FRAMEBUFFER(
 parameter HSIZE = 800;
 parameter VSIZE = 600;
 
+reg [7:0] color = 69;
+
+always@(posedge PIXEL_CLK) begin
+	color <= PIX_COLOR;
+	end
+
 /*reg [7:0] VRAM [0:HSIZE*VSIZE-1];
 
 always@(posedge PIXEL_CLK) begin
@@ -45,5 +51,6 @@ always@(posedge PIXEL_CLK) begin
 end
 */
 
-assign PIXEL_DATA = PIX_COLOR;
+
+assign PIXEL_DATA = color;
 endmodule
