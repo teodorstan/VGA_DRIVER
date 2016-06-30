@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: CTRL_CIRCUIT.prj
@@ -115,8 +115,10 @@ Compiling verilog file "ipcore_dir/COUNTER2.v" in library work
 Module <LATCH> compiled
 Compiling verilog file "ipcore_dir/COUNTER.v" in library work
 Module <COUNTER2> compiled
-Compiling verilog file "CMP.v" in library work
+Compiling verilog file "Filter.v" in library work
 Module <COUNTER> compiled
+Compiling verilog file "CMP.v" in library work
+Module <LPFilter> compiled
 Compiling verilog file "CTRL_CIRCUIT.v" in library work
 Module <CMP> compiled
 Module <CTRL_CIRCUIT> compiled
@@ -142,6 +144,10 @@ Analyzing hierarchy for module <LATCH> in library <work>.
 Analyzing hierarchy for module <CMP> in library <work> with parameters.
 	toCompare = "00000000000000000000000000000101"
 
+Analyzing hierarchy for module <LPFilter> in library <work> with parameters.
+	dim = "00000000000000000000000000001010"
+	highVal = "00000000000000000000000111110100"
+
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -149,8 +155,8 @@ Analyzing hierarchy for module <CMP> in library <work> with parameters.
 Analyzing top module <CTRL_CIRCUIT>.
 	h_width = 32'sb00000000000000000000000001110111
 	v_width = 32'sb00000000000000000000000000000101
-WARNING:Xst:2211 - "ipcore_dir/COUNTER.v" line 23: Instantiating black box module <COUNTER>.
-WARNING:Xst:2211 - "ipcore_dir/COUNTER2.v" line 47: Instantiating black box module <COUNTER2>.
+WARNING:Xst:2211 - "ipcore_dir/COUNTER.v" line 37: Instantiating black box module <COUNTER>.
+WARNING:Xst:2211 - "ipcore_dir/COUNTER2.v" line 61: Instantiating black box module <COUNTER2>.
 Module <CTRL_CIRCUIT> is correct for synthesis.
  
     Set user-defined property "SYN_BLACK_BOX =  1" for instance <horiz_counter> in unit <CTRL_CIRCUIT>.
@@ -173,6 +179,11 @@ Module <LATCH> is correct for synthesis.
 Analyzing module <CMP.3> in library <work>.
 	toCompare = 32'sb00000000000000000000000000000101
 Module <CMP.3> is correct for synthesis.
+ 
+Analyzing module <LPFilter> in library <work>.
+	dim = 32'sb00000000000000000000000000001010
+	highVal = 32'sb00000000000000000000000111110100
+Module <LPFilter> is correct for synthesis.
  
 
 =========================================================================
@@ -201,15 +212,28 @@ Synthesizing Unit <CMP_3>.
 Unit <CMP_3> synthesized.
 
 
+Synthesizing Unit <LPFilter>.
+    Related source file is "Filter.v".
+    Found 11-bit comparator less for signal <out$cmp_lt0000> created at line 11.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <LPFilter> synthesized.
+
+
 Synthesizing Unit <CTRL_CIRCUIT>.
     Related source file is "CTRL_CIRCUIT.v".
+WARNING:Xst:646 - Signal <vc_o_w<10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <hc_o_w<10>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <CTRL_CIRCUIT> synthesized.
 
 
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Comparators                                          : 2
+ 11-bit comparator less                                : 2
+
 =========================================================================
 
 =========================================================================
@@ -226,7 +250,10 @@ Loading core <COUNTER2> for timing and area information for instance <vert_count
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Comparators                                          : 2
+ 11-bit comparator less                                : 2
+
 =========================================================================
 
 =========================================================================
@@ -237,7 +264,7 @@ Optimizing unit <CTRL_CIRCUIT> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block CTRL_CIRCUIT, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block CTRL_CIRCUIT, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -269,17 +296,19 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 3
+# IOs                              : 39
 
 Cell Usage :
-# BELS                             : 11
-#      LUT3                        : 4
-#      LUT4                        : 6
-#      LUT4_L                      : 1
+# BELS                             : 36
+#      LUT2                        : 14
+#      LUT3                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 15
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 2
-#      OBUF                        : 2
+# IO Buffers                       : 38
+#      IBUF                        : 8
+#      OBUF                        : 30
 =========================================================================
 
 Device utilization summary:
@@ -287,10 +316,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                        6  out of   4656     0%  
- Number of 4 input LUTs:                 11  out of   9312     0%  
- Number of IOs:                           3
- Number of bonded IOBs:                   3  out of    232     1%  
+ Number of Slices:                       18  out of   4656     0%  
+ Number of 4 input LUTs:                 36  out of   9312     0%  
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    232    16%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -325,10 +354,10 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 4.199ns (Maximum Frequency: 238.132MHz)
+   Minimum period: 4.241ns (Maximum Frequency: 235.810MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 6.376ns
-   Maximum combinational path delay: No path found
+   Maximum output required time after clock: 7.927ns
+   Maximum combinational path delay: 4.632ns
 
 Timing Detail:
 --------------
@@ -336,10 +365,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'PIX_CLK'
-  Clock period: 4.199ns (frequency: 238.132MHz)
+  Clock period: 4.241ns (frequency: 235.810MHz)
   Total number of paths / destination ports: 462 / 61
 -------------------------------------------------------------------------
-Delay:               4.199ns (Levels of Logic = 4)
+Delay:               4.241ns (Levels of Logic = 4)
   Source:            sec_inst (FF)
   Destination:       sec_inst (FF)
   Source Clock:      PIX_CLK rising
@@ -349,40 +378,59 @@ Delay:               4.199ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SEC:C->out            8   0.514   0.673  sec_inst (sec_net)
+     SEC:C->out            7   0.514   0.754  sec_inst (sec_net)
      end scope: 'blk00000001'
      end scope: 'horiz_counter'
-     LUT3:I2->O            1   0.612   0.426  vert_counter_not000021 (vert_counter_not000021)
-     LUT3:I1->O           16   0.612   0.879  vert_counter_not000046 (vert_counter_not0000)
+     LUT4:I0->O            1   0.612   0.387  vert_counter_not000044 (vert_counter_not000044)
+     LUT3:I2->O           16   0.612   0.879  vert_counter_not000046 (vert_counter_not0000)
      begin scope: 'vert_counter'
      begin scope: 'blk00000001'
      SEC:in                    0.483          sec_inst
     ----------------------------------------
-    Total                      4.199ns (2.221ns logic, 1.978ns route)
-                                       (52.9% logic, 47.1% route)
+    Total                      4.241ns (2.221ns logic, 2.020ns route)
+                                       (52.4% logic, 47.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'PIX_CLK'
-  Total number of paths / destination ports: 21 / 2
+  Total number of paths / destination ports: 174 / 22
 -------------------------------------------------------------------------
-Offset:              6.376ns (Levels of Logic = 4)
+Offset:              7.927ns (Levels of Logic = 5)
   Source:            sec_inst (FF)
-  Destination:       HS (PAD)
+  Destination:       hc_o<8> (PAD)
   Source Clock:      PIX_CLK rising
 
-  Data Path: sec_inst to HS
+  Data Path: sec_inst to hc_o<8>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SEC:C->out            3   0.514   0.603  sec_inst (sec_net)
+     SEC:C->out           10   0.514   0.819  sec_inst (sec_net)
      end scope: 'blk00000001'
      end scope: 'horiz_counter'
-     LUT4:I0->O            1   0.612   0.509  hs_latch/q4 (hs_latch/q4)
-     LUT3:I0->O            1   0.612   0.357  hs_latch/q20 (HS_OBUF)
-     OBUF:I->O                 3.169          HS_OBUF (HS)
+     LUT4:I1->O            2   0.612   0.383  hc_link/out_cmp_lt0000237_SW0 (N4)
+     LUT4:I3->O            9   0.612   0.849  hc_link/out_cmp_lt0000237 (hc_link/out_cmp_lt0000)
+     LUT2:I0->O            1   0.612   0.357  hc_link/out<8>1 (hc_o_8_OBUF)
+     OBUF:I->O                 3.169          hc_o_8_OBUF (hc_o<8>)
     ----------------------------------------
-    Total                      6.376ns (4.907ns logic, 1.469ns route)
-                                       (77.0% logic, 23.0% route)
+    Total                      7.927ns (5.519ns logic, 2.408ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.632ns (Levels of Logic = 2)
+  Source:            PIX_DATA<7> (PAD)
+  Destination:       Blue<1> (PAD)
+
+  Data Path: PIX_DATA<7> to Blue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  PIX_DATA_7_IBUF (Blue_1_OBUF)
+     OBUF:I->O                 3.169          Blue_1_OBUF (Blue<1>)
+    ----------------------------------------
+    Total                      4.632ns (4.275ns logic, 0.357ns route)
+                                       (92.3% logic, 7.7% route)
 
 =========================================================================
 WARNING:Xst:616 - Invalid property "SYN_BLACK_BOX 1": Did not attach to horiz_counter.
@@ -392,14 +440,14 @@ WARNING:Xst:616 - Invalid property "SYN_NOPRUNE 1": Did not attach to vert_count
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.44 secs
+Total CPU time to Xst completion: 3.67 secs
  
 --> 
 
 
-Total memory usage is 513796 kilobytes
+Total memory usage is 514464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

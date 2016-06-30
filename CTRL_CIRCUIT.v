@@ -2,9 +2,15 @@
 
 module CTRL_CIRCUIT(
 	input PIX_CLK,
+	input  [7:0] PIX_DATA,
+	output [9:0] hc_o,
+	output [9:0] vc_o,
 	output HS,
-	output VS
-    );
+	output VS,
+	output [2:0] Red,
+	output [2:0] Green,
+	output [1:0] Blue
+   );
 
 parameter h_width = 119;//119
 parameter v_width = 5;//5
@@ -17,8 +23,16 @@ wire [9 : 0] vc_w;
 wire latch_set_v;
 wire latch_reset_v;
 wire [10:0] vc_w_c;
+wire [10:0] hc_o_w;
+wire [10:0] vc_o_w;
 
 assign HS = HS_w;
+assign vc_w_c = {1'b0 , vc_w};
+assign hc_o = hc_o_w [9:0];
+assign vc_o = vc_o_w [9:0];
+assign Red = PIX_DATA [2:0];
+assign Green = PIX_DATA [5:3];
+assign Blue = PIX_DATA [7:6];
 
 COUNTER horiz_counter (
   .clk(PIX_CLK),
@@ -50,7 +64,7 @@ COUNTER2 vert_counter (
   .q(vc_w)
 );
 
-assign vc_w_c = {1'b0 , vc_w};
+
 
 CMP zero_detect_vs(
 	.in(vc_w_c),
@@ -70,4 +84,15 @@ LATCH vc_latch(
 	.q(VS)
 );
 
+LPFilter hc_link (
+	.in(hc_w),
+	.out(hc_o_w)
+	);
+
+LPFilter vc_link (
+	.in(vc_w),
+	.out(vc_o_w)
+	);
+		
+	
 endmodule

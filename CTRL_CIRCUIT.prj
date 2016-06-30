@@ -1,5 +1,6 @@
 verilog work "LATCH.v"
 verilog work "ipcore_dir/COUNTER2.v"
 verilog work "ipcore_dir/COUNTER.v"
+verilog work "Filter.v"
 verilog work "CMP.v"
 verilog work "CTRL_CIRCUIT.v"

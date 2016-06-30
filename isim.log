@@ -1,0 +1,21 @@
+ISim log file
+Running: /home/student/VGA_DRIVER/CTRLCIR_T_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/student/VGA_DRIVER/CTRLCIR_T_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING:  For instance uut/zero_detect_vs/, width 11 of formal port in is not equal to width 42 of actual constant.
+WARNING:  For instance uut/vs_det/, width 11 of formal port in is not equal to width 42 of actual constant.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 7792003 ns : File "/home/student/VGA_DRIVER/CTRLCIR_T.v" Line 43
+# exit 0
