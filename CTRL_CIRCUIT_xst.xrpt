@@ -5,14 +5,22 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
+<<<<<<< HEAD
   <application stringID="Xst" timeStamp="Thu Jun 30 11:58:57 2016">
+=======
+  <application stringID="Xst" timeStamp="Thu Jun 30 11:49:31 2016">
+>>>>>>> 9c914db6ca684a68ddb70aef8574e14d66b682a9
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
+<<<<<<< HEAD
           <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin"/>
+=======
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"/>
+>>>>>>> 9c914db6ca684a68ddb70aef8574e14d66b682a9
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="XILINX"/>
@@ -27,13 +35,22 @@
         <item stringID="User_EnvOsname" value="LinuxMint"/>
         <item stringID="User_EnvOsrelease" value="Linux Mint 17.3 Rosa"/>
       </item>
+<<<<<<< HEAD
       <item stringID="User_EnvHost" value="olympus12"/>
+=======
+      <item stringID="User_EnvHost" value="ThinkPad-T540p"/>
+>>>>>>> 9c914db6ca684a68ddb70aef8574e14d66b682a9
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
+<<<<<<< HEAD
           <item stringID="arch" value="Intel(R) Core(TM) i5-4570S CPU @ 2.90GHz"/>
           <item stringID="speed" value="3598.718 MHz"/>
+=======
+          <item stringID="arch" value="Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz"/>
+          <item stringID="speed" value="3293.531 MHz"/>
+>>>>>>> 9c914db6ca684a68ddb70aef8574e14d66b682a9
         </row>
       </table>
     </section>
