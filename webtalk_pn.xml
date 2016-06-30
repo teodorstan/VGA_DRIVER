@@ -3,11 +3,19 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
+<<<<<<< HEAD
 <application name="pn" timeStamp="Thu Jun 30 12:37:27 2016">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="234D1788AF2569D0726CB1F163F28AAC" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
 <property name="ProjectFile" value="/home/student/VGA_DRIVER/VGA_DRIVER.xise" type="project"/>
+=======
+<application name="pn" timeStamp="Thu Jun 30 12:25:18 2016">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="234D1788AF2569D0726CB1F163F28AAC" type="project"/>
+<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectFile" value="/home/teodor/summerSchool/VGA_DRIVER/VGA_DRIVER.xise" type="project"/>
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
 <property name="ProjectCreationTimestamp" value="2016-06-29T14:20:26" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -26,6 +34,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_intWbtProjectID" value="234D1788AF2569D0726CB1F163F28AAC" type="design"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.CTRLCIR_T" type="process"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="false" type="design"/>
@@ -37,6 +46,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-5" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_COREGEN" value="2" type="source"/>
+<<<<<<< HEAD
+=======
+<property name="FILE_UCF" value="1" type="source"/>
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
 <property name="FILE_VERILOG" value="7" type="source"/>
 </section>
 </application>

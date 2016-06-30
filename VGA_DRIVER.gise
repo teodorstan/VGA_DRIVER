@@ -22,8 +22,11 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="VGA_DRIVER.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+<<<<<<< HEAD
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="CTRL_CIRCUIT.ngr"/>
+=======
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TOP_VGA.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TOP_VGA.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TOP_VGA.prj"/>
@@ -31,12 +34,16 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TOP_VGA.xst"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_VGA_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+<<<<<<< HEAD
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+=======
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+<<<<<<< HEAD
     <transform xil_pn:end_ts="1467279416" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1467279416">
       <status xil_pn:value="SuccessfullyRun"/>
     </transform>
@@ -73,6 +80,39 @@
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="CTRL_CIRCUIT.ngr"/>
+=======
+    <transform xil_pn:end_ts="1467278679" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278679" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5835316023778682711" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278679" xil_pn:in_ck="4726642162808754304" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="3717913855046409904" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278679" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8567950038654983769" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278679" xil_pn:in_ck="-5422286072583878850" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278679" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5726068906710728070" xil_pn:start_ts="1467278679">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1467278721" xil_pn:in_ck="5351199033971308606" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-2757087139592769757" xil_pn:start_ts="1467278717">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
       <outfile xil_pn:name="TOP_VGA.lso"/>
       <outfile xil_pn:name="TOP_VGA.prj"/>
       <outfile xil_pn:name="TOP_VGA.syr"/>
@@ -82,10 +122,13 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
+<<<<<<< HEAD
     <transform xil_pn:end_ts="1467279419" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1262981241618522578" xil_pn:start_ts="1467279419">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
+=======
+>>>>>>> c19ac6b7740a263ad937eb30c4b7842e045fd117
   </transforms>
 
 </generated_project>

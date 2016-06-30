@@ -1,4 +1,6 @@
 # intermediate build files
+*.wdb
+*.exe
 *.bgn
 *.bit
 *.bld
