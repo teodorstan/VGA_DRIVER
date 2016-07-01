@@ -67,7 +67,7 @@ CNT #(.pixWidth(fullAreaHoriz),
 ) cntHoriz (
 	.RST(RST_IN),
    .CLK(PIX_CLK),
-   .CNT(hCnt) 
+   .out(hCnt) 
 );
 
 CMP #(.toCmp(0),
@@ -97,7 +97,7 @@ CNT #(.pixWidth(fullAreaVert),
 ) cntVert (
 	.RST(RST_IN),
    .CLK(HS_w),
-   .CNT(vCnt) 
+   .out(vCnt) 
 );
 
 CMP #(.toCmp(0),

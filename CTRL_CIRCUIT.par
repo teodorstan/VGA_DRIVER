@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-olympus05::  Fri Jul 01 15:08:38 2016
+olympus05::  Fri Jul 01 15:34:54 2016
 
 par -w -intstyle ise -ol high -t 1 CTRL_CIRCUIT_map.ncd CTRL_CIRCUIT.ncd
 CTRL_CIRCUIT.pcf 
@@ -30,10 +30,14 @@ Design Summary Report:
    Number of External Input IOBs                 10
 
       Number of External Input IBUFs             10
+        Number of LOCed External Input IBUFs     10 out of 10    100%
+
 
    Number of External Output IOBs                10
 
       Number of External Output IOBs             10
+        Number of LOCed External Output IOBs     10 out of 10    100%
+
 
    Number of External Bidir IOBs                  0
 
@@ -59,44 +63,37 @@ Total REAL time at the beginning of Placer: 0 secs
 Total CPU  time at the beginning of Placer: 0 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:500) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:84e6224b) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:500) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:84e6224b) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:500) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:84e6224b) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-...............
-Phase 4.2  Initial Clock and IO Placement (Checksum:931eeee8) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:19078eb) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:931eeee8) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:19078eb) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:931eeee8) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:19078eb) REAL time: 1 secs 
 
-Phase 7.3  Local Placement Optimization
-............
-Phase 7.3  Local Placement Optimization (Checksum:ecc0f16f) REAL time: 1 secs 
+Phase 7.8  Global Placement
+..
+..
+Phase 7.8  Global Placement (Checksum:19f7566b) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:ecc0f16f) REAL time: 1 secs 
+Phase 8.5  Local Placement Optimization (Checksum:19f7566b) REAL time: 2 secs 
 
-Phase 9.8  Global Placement
-......
-..
-Phase 9.8  Global Placement (Checksum:330bd8f8) REAL time: 2 secs 
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:15c0550) REAL time: 2 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:330bd8f8) REAL time: 2 secs 
-
-Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:f6531958) REAL time: 2 secs 
-
-Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:f6531958) REAL time: 2 secs 
+Phase 10.5  Local Placement Optimization (Checksum:15c0550) REAL time: 2 secs 
 
 Total REAL time to Placer completion: 2 secs 
 Total CPU  time to Placer completion: 2 secs 
@@ -111,9 +108,9 @@ Phase  1  : 152 unrouted;      REAL time: 4 secs
 
 Phase  2  : 129 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 23 unrouted;      REAL time: 4 secs 
+Phase  3  : 14 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 31 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 37 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
@@ -121,22 +118,18 @@ Updating file: CTRL_CIRCUIT.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Updating file: CTRL_CIRCUIT.ncd with current fully routed design.
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
-
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
-
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 WARNING:Route:455 - CLK Net:latchHoriz/q may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 5 secs 
-Total CPU time to Router completion: 5 secs 
+Total REAL time to Router completion: 4 secs 
+Total CPU time to Router completion: 4 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -154,13 +147,13 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             PIX_CLK | BUFGMUX_X1Y10| No   |    6 |  0.005     |  0.154      |
+|             PIX_CLK | BUFGMUX_X1Y10| No   |    6 |  0.001     |  0.150      |
 +---------------------+--------------+------+------+------------+-------------+
-|       latch_reset_h |         Local|      |    1 |  0.000     |  0.513      |
+|       latch_reset_h |         Local|      |    1 |  0.000     |  0.715      |
 +---------------------+--------------+------+------+------------+-------------+
-|        latchHoriz/q |         Local|      |    7 |  0.013     |  1.286      |
+|        latchHoriz/q |         Local|      |    7 |  0.006     |  1.338      |
 +---------------------+--------------+------+------+------------+-------------+
-|       latch_reset_v |         Local|      |    1 |  0.000     |  0.467      |
+|       latch_reset_v |         Local|      |    1 |  0.000     |  0.301      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -180,11 +173,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net PIX | SETUP       |         N/A|     5.942ns|     N/A|           0
-  _CLK                                      | HOLD        |     1.433ns|            |       0|           0
+  Autotimespec constraint for clock net PIX | SETUP       |         N/A|     5.148ns|     N/A|           0
+  _CLK                                      | HOLD        |     1.439ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net lat | SETUP       |         N/A|     4.850ns|     N/A|           0
-  chHoriz/q                                 | HOLD        |     1.453ns|            |       0|           0
+  Autotimespec constraint for clock net lat | SETUP       |         N/A|     5.091ns|     N/A|           0
+  chHoriz/q                                 | HOLD        |     1.459ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -200,8 +193,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
 
 Peak Memory Usage:  602 MB
 

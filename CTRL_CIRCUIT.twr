@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
 3 -fastpaths -xml CTRL_CIRCUIT.twx CTRL_CIRCUIT.ncd -o CTRL_CIRCUIT.twr
-CTRL_CIRCUIT.pcf
+CTRL_CIRCUIT.pcf -ucf Constr.ucf
 
 Design file:              CTRL_CIRCUIT.ncd
 Physical constraint file: CTRL_CIRCUIT.pcf
@@ -45,7 +45,7 @@ Setup/Hold to clock CLKIN_IN
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RST_IN      |    4.759(R)|   -2.692(R)|PIX_CLK           |   0.000|
+RST_IN      |    5.212(R)|   -3.233(R)|PIX_CLK           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLKIN_IN
@@ -53,32 +53,32 @@ Clock to Setup on destination clock CLKIN_IN
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN_IN       |    5.942|         |         |         |
+CLKIN_IN       |    5.148|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-PIX_DATA<0>    |Red<0>         |    4.270|
-PIX_DATA<1>    |Red<1>         |    4.268|
-PIX_DATA<2>    |Red<2>         |    4.292|
-PIX_DATA<3>    |Green<0>       |    4.284|
-PIX_DATA<4>    |Green<1>       |    4.268|
-PIX_DATA<5>    |Green<2>       |    4.253|
-PIX_DATA<6>    |Blue<0>        |    4.284|
-PIX_DATA<7>    |Blue<1>        |    4.515|
+PIX_DATA<0>    |Red<0>         |    6.997|
+PIX_DATA<1>    |Red<1>         |    6.915|
+PIX_DATA<2>    |Red<2>         |    6.479|
+PIX_DATA<3>    |Green<0>       |    6.891|
+PIX_DATA<4>    |Green<1>       |    6.316|
+PIX_DATA<5>    |Green<2>       |    6.483|
+PIX_DATA<6>    |Blue<0>        |    6.580|
+PIX_DATA<7>    |Blue<1>        |    6.404|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Jul  1 15:08:46 2016 
+Analysis completed Fri Jul  1 15:35:01 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 347 MB
+Peak Memory Usage: 348 MB
 
 
 

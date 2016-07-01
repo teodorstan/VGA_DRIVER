@@ -7,10 +7,10 @@ parameter  bitDim = 15
 (
 	input CLK,
 	input RST,
-	output reg [bitDim - 1:0] CNT
+	output [bitDim - 1:0] out
     );
 	 
-
+	reg [bitDim - 1 : 0] CNT = 0;
 	 
 always@(posedge CLK) begin
 	if(RST) begin 
@@ -20,6 +20,8 @@ always@(posedge CLK) begin
 	else CNT <= CNT + 1;
 	end
 end
+
+assign out = CNT;
 
 
 endmodule
