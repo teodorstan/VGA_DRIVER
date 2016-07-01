@@ -4,4 +4,4 @@ Finished applying current project options.
 WARNING:sim - Verilog simulation file type 'Behavioral' is not valid for this
    core. Overriding with simulation file type 'Structural'.
 Cancelled executing Tcl generator.
-Wrote CGP file for project 'COUNTER2'.
+Wrote CGP file for project 'COUNTER'.

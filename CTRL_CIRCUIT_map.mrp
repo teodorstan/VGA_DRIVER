@@ -9,36 +9,36 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Jun 30 15:58:09 2016
+Mapped Date    : Fri Jul  1 14:14:49 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    2
 Logic Utilization:
-  Total Number Slice Registers:          22 out of   9,312    1%
-    Number used as Flip Flops:           21
-    Number used as Latches:               1
-  Number of 4 input LUTs:                19 out of   9,312    1%
+  Total Number Slice Registers:          24 out of   9,312    1%
+    Number used as Flip Flops:           22
+    Number used as Latches:               2
+  Number of 4 input LUTs:                20 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             21 out of   4,656    1%
-    Number of Slices containing only related logic:      21 out of      21 100%
-    Number of Slices containing unrelated logic:          0 out of      21   0%
+  Number of occupied Slices:             25 out of   4,656    1%
+    Number of Slices containing only related logic:      25 out of      25 100%
+    Number of Slices containing unrelated logic:          0 out of      25   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          38 out of   9,312    1%
-    Number used as logic:                19
-    Number used as a route-thru:         19
+  Total Number of 4 input LUTs:          40 out of   9,312    1%
+    Number used as logic:                20
+    Number used as a route-thru:         20
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 19 out of     232    8%
-    IOB Latches:                          2
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of bonded IOBs:                 20 out of     232    8%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                2.34
+Average Fanout of Non-Clock Nets:                2.21
 
-Peak Memory Usage:  611 MB
+Peak Memory Usage:  609 MB
 Total REAL time to MAP completion:  1 secs 
 Total CPU time to MAP completion:   1 secs 
 
@@ -81,10 +81,10 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_h is sourced by
+WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_v is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_v is sourced by
+WARNING:PhysDesignRules:372 - Gated clock. Clock net latch_reset_h is sourced by
    a combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
 
@@ -94,6 +94,9 @@ INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
+INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp multiplier/DCM_SP_INST,
+   consult the device Interactive Data Sheet.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
@@ -119,11 +122,11 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Blue<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | Blue<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| CLKIN_IN                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | Green<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | Green<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | Green<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
-| PIX_CLK                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| HS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | PIX_DATA<0>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | PIX_DATA<1>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | PIX_DATA<2>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
@@ -132,10 +135,11 @@ Section 6 - IOB Properties
 | PIX_DATA<5>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | PIX_DATA<6>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | PIX_DATA<7>                        | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| RST_IN                             | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | Red<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | Red<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | Red<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| VS                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

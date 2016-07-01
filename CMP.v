@@ -18,14 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CMP(
-	input [10:0] in,
-	input [10:0] toCompare,
+module CMP#(
+parameter toCmp = 40,
+parameter bitDim = 11
+)
+(
+	input [bitDim - 1:0] in,
 	output out
-    );
+);
 
 
 
-assign out = (in == toCompare);
+assign out = (in == toCmp);
 
 endmodule

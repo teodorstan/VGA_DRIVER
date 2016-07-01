@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/student/VGA_DRIVER/TestCTRl_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/student/VGA_DRIVER/TestCTRl_isim_beh.wdb 
+Running: /home/student/VGA_DRIVER/TEST_VGA_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/student/VGA_DRIVER/TEST_VGA_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,7 +11,9 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+Input Error : RST on instance TEST_VGA.uut.multiplier.DCM_SP_INST must be asserted for 3 CLKIN clock cycles.
 # restart
-# run 15ms
+# run 10ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+Input Error : RST on instance TEST_VGA.uut.multiplier.DCM_SP_INST must be asserted for 3 CLKIN clock cycles.

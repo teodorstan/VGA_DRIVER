@@ -56,6 +56,7 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 COUNTER your_instance_name (
   .clk(clk), // input clk
+  .sclr(sclr), // input sclr
   .q(q) // output [10 : 0] q
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

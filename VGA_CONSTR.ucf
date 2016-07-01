@@ -1,4 +1,4 @@
-net PIX_CLK loc = B8;
+net CLKIN_IN loc = B8;
 
 net Red[0] loc = R9;
 net Red[1] loc = T8;
