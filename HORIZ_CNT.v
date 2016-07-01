@@ -16,7 +16,7 @@ always@(posedge CLK) begin
 	if(RST) begin 
 		CNT <= 0;
 	end else begin 
-	if (CNT >= pixWidth) CNT <= 0;
+	if (CNT >= pixWidth - 1) CNT <= 0;
 	else CNT <= CNT + 1;
 	end
 end

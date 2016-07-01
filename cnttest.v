@@ -22,8 +22,8 @@ module cnttest;
 		RST = 0;
 
 
-		#5000 RST = 1;
-		#5000 RST = 0;
+		#500 RST = 1;
+		#500 RST = 0;
         
 		// Add stimulus here
 

@@ -49,7 +49,7 @@ LAB4:    xsi_set_current_line(22, ng0);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(25, ng0);
     t2 = (t0 + 2328);
-    xsi_process_wait(t2, 100000LL);
+    xsi_process_wait(t2, 500000LL);
     *((char **)t1) = &&LAB5;
 
 LAB1:    return;
@@ -59,7 +59,7 @@ LAB5:    xsi_set_current_line(25, ng0);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 1);
     xsi_set_current_line(26, ng0);
     t2 = (t0 + 2328);
-    xsi_process_wait(t2, 100000LL);
+    xsi_process_wait(t2, 500000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
 

@@ -36,8 +36,8 @@ module TEST_VGA;
 
 		PIX_DATA = 5;
 		RST_IN = 0;
-		#40 RST_IN = 1;
-		#50 RST_IN = 0;
+		#2000 RST_IN = 1;
+		#300 RST_IN = 0;
 
 	end
       

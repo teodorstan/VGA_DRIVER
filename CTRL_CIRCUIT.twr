@@ -45,7 +45,7 @@ Setup/Hold to clock CLKIN_IN
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RST_IN      |    4.489(R)|   -2.454(R)|PIX_CLK           |   0.000|
+RST_IN      |    4.759(R)|   -2.692(R)|PIX_CLK           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLKIN_IN
@@ -53,25 +53,25 @@ Clock to Setup on destination clock CLKIN_IN
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN_IN       |    4.114|         |         |         |
+CLKIN_IN       |    5.942|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-PIX_DATA<0>    |Red<0>         |    4.261|
-PIX_DATA<1>    |Red<1>         |    4.284|
-PIX_DATA<2>    |Red<2>         |    4.253|
+PIX_DATA<0>    |Red<0>         |    4.270|
+PIX_DATA<1>    |Red<1>         |    4.268|
+PIX_DATA<2>    |Red<2>         |    4.292|
 PIX_DATA<3>    |Green<0>       |    4.284|
-PIX_DATA<4>    |Green<1>       |    4.253|
-PIX_DATA<5>    |Green<2>       |    4.270|
-PIX_DATA<6>    |Blue<0>        |    4.253|
-PIX_DATA<7>    |Blue<1>        |    4.513|
+PIX_DATA<4>    |Green<1>       |    4.268|
+PIX_DATA<5>    |Green<2>       |    4.253|
+PIX_DATA<6>    |Blue<0>        |    4.284|
+PIX_DATA<7>    |Blue<1>        |    4.515|
 ---------------+---------------+---------+
 
 
-Analysis completed Fri Jul  1 14:14:59 2016 
+Analysis completed Fri Jul  1 15:08:46 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

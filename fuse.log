@@ -1,38 +1,22 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/student/VGA_DRIVER/TEST_VGA_isim_beh.exe -prj /home/student/VGA_DRIVER/TEST_VGA_beh.prj work.TEST_VGA work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/student/VGA_DRIVER/cnttest_isim_beh.exe -prj /home/student/VGA_DRIVER/cnttest_beh.prj work.cnttest work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/student/VGA_DRIVER/LATCH.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/DCM75M.v" into library work
 Analyzing Verilog file "/home/student/VGA_DRIVER/HORIZ_CNT.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/CMP.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" into library work
-Analyzing Verilog file "/home/student/VGA_DRIVER/TEST_VGA.v" into library work
+Analyzing Verilog file "/home/student/VGA_DRIVER/cnttest.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 95440 KB
-Fuse CPU Usage: 760 ms
-Compiling module BUFG
-Compiling module dcm_sp_clock_divide_by_2
-Compiling module dcm_sp_maximum_period_check(cloc...
-Compiling module dcm_sp_maximum_period_check(cloc...
-Compiling module dcm_sp_clock_lost
-Compiling module DCM_SP(CLKFX_DIVIDE=10,CLKFX_MUL...
-Compiling module DCM75M
-Compiling module CNT(pixWidth=1688,bitDim=11)
-Compiling module CMP(toCmp=0,bitDim=11)
-Compiling module CMP(toCmp=1280,bitDim=11)
-Compiling module LATCH
-Compiling module CNT(pixWidth=1066,bitDim=11)
-Compiling module CMP(toCmp=1024,bitDim=11)
-Compiling module CTRL_CIRCUIT_default
-Compiling module TEST_VGA
+Fuse Memory Usage: 94640 KB
+Fuse CPU Usage: 840 ms
+Compiling module CNT
+Compiling module cnttest
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 16 Verilog Units
-Built simulation executable /home/student/VGA_DRIVER/TEST_VGA_isim_beh.exe
-Fuse Memory Usage: 1183560 KB
-Fuse CPU Usage: 840 ms
-GCC CPU Usage: 1300 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable /home/student/VGA_DRIVER/cnttest_isim_beh.exe
+Fuse Memory Usage: 1179096 KB
+Fuse CPU Usage: 850 ms
+GCC CPU Usage: 120 ms

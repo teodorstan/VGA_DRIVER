@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.03 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -239,7 +239,7 @@ Performing bidirectional port resolution...
 Synthesizing Unit <CNT_1>.
     Related source file is "HORIZ_CNT.v".
     Found 11-bit up counter for signal <CNT>.
-    Found 12-bit comparator greatequal for signal <CNT$cmp_ge0000> created at line 19.
+    Found 11-bit comparator greatequal for signal <CNT$cmp_ge0000> created at line 19.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 Comparator(s).
@@ -265,7 +265,7 @@ Unit <LATCH> synthesized.
 Synthesizing Unit <CNT_2>.
     Related source file is "HORIZ_CNT.v".
     Found 11-bit up counter for signal <CNT>.
-    Found 12-bit comparator greatequal for signal <CNT$cmp_ge0000> created at line 19.
+    Found 11-bit comparator greatequal for signal <CNT$cmp_ge0000> created at line 19.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 Comparator(s).
@@ -298,7 +298,7 @@ Macro Statistics
 # Latches                                              : 2
  1-bit latch                                           : 2
 # Comparators                                          : 2
- 12-bit comparator greatequal                          : 2
+ 11-bit comparator greatequal                          : 2
 
 =========================================================================
 
@@ -316,7 +316,7 @@ Macro Statistics
 # Latches                                              : 2
  1-bit latch                                           : 2
 # Comparators                                          : 2
- 12-bit comparator greatequal                          : 2
+ 11-bit comparator greatequal                          : 2
 
 =========================================================================
 
@@ -366,15 +366,15 @@ Design Statistics
 # IOs                              : 20
 
 Cell Usage :
-# BELS                             : 86
+# BELS                             : 108
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 20
-#      LUT2_L                      : 1
-#      LUT3                        : 3
-#      LUT4                        : 11
-#      MUXCY                       : 20
-#      MUXF5                       : 3
+#      INV                         : 7
+#      LUT1                        : 26
+#      LUT2                        : 5
+#      LUT3                        : 4
+#      LUT4                        : 7
+#      MUXCY                       : 34
+#      MUXF5                       : 1
 #      VCC                         : 1
 #      XORCY                       : 22
 # FlipFlops/Latches                : 24
@@ -395,9 +395,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       24  out of   4656     0%  
+ Number of Slices:                       29  out of   4656     0%  
  Number of Slice Flip Flops:             24  out of   9312     0%  
- Number of 4 input LUTs:                 39  out of   9312     0%  
+ Number of 4 input LUTs:                 49  out of   9312     0%  
  Number of IOs:                          20
  Number of bonded IOBs:                  20  out of    232     8%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -447,7 +447,7 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 12.332ns (Maximum Frequency: 81.090MHz)
+   Minimum period: 14.624ns (Maximum Frequency: 68.379MHz)
    Minimum input arrival time before clock: 3.838ns
    Maximum output required time after clock: 5.543ns
    Maximum combinational path delay: 4.632ns
@@ -458,57 +458,69 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'latchHoriz/q'
-  Clock period: 4.594ns (frequency: 217.656MHz)
-  Total number of paths / destination ports: 176 / 22
+  Clock period: 5.416ns (frequency: 184.624MHz)
+  Total number of paths / destination ports: 187 / 22
 -------------------------------------------------------------------------
-Delay:               4.594ns (Levels of Logic = 3)
-  Source:            cntVert/CNT_3 (FF)
+Delay:               5.416ns (Levels of Logic = 9)
+  Source:            cntVert/CNT_0 (FF)
   Destination:       cntVert/CNT_0 (FF)
   Source Clock:      latchHoriz/q rising
   Destination Clock: latchHoriz/q rising
 
-  Data Path: cntVert/CNT_3 to cntVert/CNT_0
+  Data Path: cntVert/CNT_0 to cntVert/CNT_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.514   0.603  cntVert/CNT_3 (cntVert/CNT_3)
-     LUT4:I0->O            1   0.612   0.387  cntVert/CNT_or000010 (cntVert/CNT_or000010)
-     LUT4:I2->O            1   0.612   0.000  cntVert/CNT_or0000321 (cntVert/CNT_or000032)
-     MUXF5:I0->O          11   0.278   0.793  cntVert/CNT_or000032_f5 (cntVert/CNT_or0000)
+     FDR:C->Q              3   0.514   0.603  cntVert/CNT_0 (cntVert/CNT_0)
+     LUT1:I0->O            1   0.612   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<0>_rt (cntVert/Mcompar_CNT_cmp_ge0000_cy<0>_rt)
+     MUXCY:S->O            1   0.404   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<0> (cntVert/Mcompar_CNT_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<1> (cntVert/Mcompar_CNT_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<2> (cntVert/Mcompar_CNT_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<3> (cntVert/Mcompar_CNT_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<4> (cntVert/Mcompar_CNT_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<5> (cntVert/Mcompar_CNT_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.399   0.426  cntVert/Mcompar_CNT_cmp_ge0000_cy<6> (cntVert/CNT_cmp_ge0000)
+     LUT2:I1->O           11   0.612   0.793  cntVert/CNT_or00001 (cntVert/CNT_or0000)
      FDR:R                     0.795          cntVert/CNT_0
     ----------------------------------------
-    Total                      4.594ns (2.811ns logic, 1.783ns route)
-                                       (61.2% logic, 38.8% route)
+    Total                      5.416ns (3.594ns logic, 1.822ns route)
+                                       (66.4% logic, 33.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLKIN_IN'
-  Clock period: 12.332ns (frequency: 81.090MHz)
-  Total number of paths / destination ports: 154 / 22
+  Clock period: 14.624ns (frequency: 68.379MHz)
+  Total number of paths / destination ports: 187 / 22
 -------------------------------------------------------------------------
-Delay:               4.567ns (Levels of Logic = 3)
-  Source:            cntHoriz/CNT_6 (FF)
+Delay:               5.416ns (Levels of Logic = 9)
+  Source:            cntHoriz/CNT_0 (FF)
   Destination:       cntHoriz/CNT_0 (FF)
   Source Clock:      CLKIN_IN rising 2.7X
   Destination Clock: CLKIN_IN rising 2.7X
 
-  Data Path: cntHoriz/CNT_6 to cntHoriz/CNT_0
+  Data Path: cntHoriz/CNT_0 to cntHoriz/CNT_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.514   0.603  cntHoriz/CNT_6 (cntHoriz/CNT_6)
-     LUT4:I0->O            1   0.612   0.000  cntHoriz/CNT_or000071 (cntHoriz/CNT_or000071)
-     MUXF5:I1->O           1   0.278   0.360  cntHoriz/CNT_or00007_f5 (cntHoriz/CNT_or00007)
-     LUT4:I3->O           11   0.612   0.793  cntHoriz/CNT_or000024 (cntHoriz/CNT_or0000)
+     FDR:C->Q              3   0.514   0.603  cntHoriz/CNT_0 (cntHoriz/CNT_0)
+     LUT3:I0->O            1   0.612   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_lut<0> (cntHoriz/Mcompar_CNT_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<0> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<1> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<3> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<4> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<5> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.399   0.426  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<6> (cntHoriz/CNT_cmp_ge0000)
+     LUT2:I1->O           11   0.612   0.793  cntHoriz/CNT_or00001 (cntHoriz/CNT_or0000)
      FDR:R                     0.795          cntHoriz/CNT_0
     ----------------------------------------
-    Total                      4.567ns (2.811ns logic, 1.756ns route)
-                                       (61.5% logic, 38.5% route)
+    Total                      5.416ns (3.594ns logic, 1.822ns route)
+                                       (66.4% logic, 33.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'latchHoriz/q'
   Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              3.715ns (Levels of Logic = 2)
+Offset:              3.838ns (Levels of Logic = 2)
   Source:            RST_IN (PAD)
   Destination:       cntVert/CNT_0 (FF)
   Destination Clock: latchHoriz/q rising
@@ -517,12 +529,12 @@ Offset:              3.715ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.106   0.380  RST_IN_IBUF (RST_IN_IBUF)
-     MUXF5:S->O           11   0.641   0.793  cntVert/CNT_or000032_f5 (cntVert/CNT_or0000)
+     IBUF:I->O             2   1.106   0.532  RST_IN_IBUF (RST_IN_IBUF)
+     LUT2:I0->O           11   0.612   0.793  cntVert/CNT_or00001 (cntVert/CNT_or0000)
      FDR:R                     0.795          cntVert/CNT_0
     ----------------------------------------
-    Total                      3.715ns (2.542ns logic, 1.173ns route)
-                                       (68.4% logic, 31.6% route)
+    Total                      3.838ns (2.513ns logic, 1.325ns route)
+                                       (65.5% logic, 34.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKIN_IN'
@@ -538,7 +550,7 @@ Offset:              3.838ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.106   0.532  RST_IN_IBUF (RST_IN_IBUF)
-     LUT4:I0->O           11   0.612   0.793  cntHoriz/CNT_or000024 (cntHoriz/CNT_or0000)
+     LUT2:I0->O           11   0.612   0.793  cntHoriz/CNT_or00001 (cntHoriz/CNT_or0000)
      FDR:R                     0.795          cntHoriz/CNT_0
     ----------------------------------------
     Total                      3.838ns (2.513ns logic, 1.325ns route)
@@ -606,12 +618,12 @@ Delay:               4.632ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 2.84 secs
+Total CPU time to Xst completion: 2.79 secs
  
 --> 
 
 
-Total memory usage is 521604 kilobytes
+Total memory usage is 521576 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
