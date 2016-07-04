@@ -45,33 +45,42 @@ Setup/Hold to clock CLKIN_IN
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-RST_IN      |    5.212(R)|   -3.233(R)|PIX_CLK           |   0.000|
+PIX_DATAA<0>|    6.599(R)|   -3.118(R)|PIX_CLK           |   0.000|
+PIX_DATAA<1>|    6.591(R)|   -3.109(R)|PIX_CLK           |   0.000|
+PIX_DATAA<2>|    6.588(R)|   -3.105(R)|PIX_CLK           |   0.000|
+PIX_DATAA<3>|    6.592(R)|   -3.111(R)|PIX_CLK           |   0.000|
+PIX_DATAA<4>|    6.584(R)|   -3.100(R)|PIX_CLK           |   0.000|
+PIX_DATAA<5>|    6.600(R)|   -3.120(R)|PIX_CLK           |   0.000|
+PIX_DATAA<6>|    6.585(R)|   -3.102(R)|PIX_CLK           |   0.000|
+PIX_DATAA<7>|    6.579(R)|   -3.094(R)|PIX_CLK           |   0.000|
+RST_IN      |    6.359(R)|   -4.103(R)|PIX_CLK           |   0.000|
 ------------+------------+------------+------------------+--------+
+
+Clock CLKIN_IN to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+Blue<0>     |    8.119(R)|PIX_CLK           |   0.000|
+Blue<1>     |    8.016(R)|PIX_CLK           |   0.000|
+Green<0>    |    8.058(R)|PIX_CLK           |   0.000|
+Green<1>    |    7.480(R)|PIX_CLK           |   0.000|
+Green<2>    |    8.772(R)|PIX_CLK           |   0.000|
+Red<0>      |    8.891(R)|PIX_CLK           |   0.000|
+Red<1>      |    8.295(R)|PIX_CLK           |   0.000|
+Red<2>      |    8.381(R)|PIX_CLK           |   0.000|
+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLKIN_IN
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLKIN_IN       |    5.148|         |         |         |
+CLKIN_IN       |    4.922|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Pad to Pad
----------------+---------------+---------+
-Source Pad     |Destination Pad|  Delay  |
----------------+---------------+---------+
-PIX_DATA<0>    |Red<0>         |    6.997|
-PIX_DATA<1>    |Red<1>         |    6.915|
-PIX_DATA<2>    |Red<2>         |    6.479|
-PIX_DATA<3>    |Green<0>       |    6.891|
-PIX_DATA<4>    |Green<1>       |    6.316|
-PIX_DATA<5>    |Green<2>       |    6.483|
-PIX_DATA<6>    |Blue<0>        |    6.580|
-PIX_DATA<7>    |Blue<1>        |    6.404|
----------------+---------------+---------+
 
-
-Analysis completed Fri Jul  1 15:35:01 2016 
+Analysis completed Mon Jul  4 11:58:41 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -1,27 +1,26 @@
 ISim log file
-Running: /home/student/VGA_DRIVER/cnttest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/student/VGA_DRIVER/cnttest_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: /home/student/VGA_DRIVER/TEST_VGA_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/student/VGA_DRIVER/TEST_VGA_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
+WARNING: File "/home/student/VGA_DRIVER/TEST_VGA.v" Line 18.  For instance TEST_VGA/uut/, width 12 of formal port posX is not equal to width 1 of actual signal posX.
+WARNING: File "/home/student/VGA_DRIVER/TEST_VGA.v" Line 19.  For instance TEST_VGA/uut/, width 12 of formal port posY is not equal to width 1 of actual signal posY.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# run 15ms
 # restart
-# run 1ms
+# run 15ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 10ms
+# run 30ms
+Stopped at time : 39147810 ns : File "/home/student/VGA_DRIVER/DCM75M.v" Line 43
 # restart
-# isim force add /cnttest/CLK 1 -radix bin -value 0 -radix bin -time 10 ns -repeat 20 ns
-# isim force add /cnttest/CLK 1 -radix bin -value 0 -radix bin -time 10 ns -repeat 20 ns
-# run 10ms
+# run 30ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# exit 0
-# exit 0

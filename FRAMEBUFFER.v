@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    11:20:40 06/30/2016 
+// Create Date:    11:20:02 07/04/2016 
 // Design Name: 
 // Module Name:    FRAMEBUFFER 
 // Project Name: 
@@ -19,38 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module FRAMEBUFFER(
-	input PIXEL_CLK,
-	input [9:0] PIX_HORIZONTAL,
-	input [9:0] PIX_VERTICAL, 
-	input [9:0] HC_I,
-	input [9:0] VC_I, 
-	input [7:0] PIX_COLOR,
-	output [7:0] PIXEL_DATA
+	input clk,
+	input [7:0] in,
+	output reg [7:0] out
     );
-	 
-parameter HSIZE = 800;
-parameter VSIZE = 600;
 
-reg [7:0] color = 69;
-
-always@(posedge PIXEL_CLK) begin
-	color <= PIX_COLOR;
-	end
-
-/*reg [7:0] VRAM [0:HSIZE*VSIZE-1];
-
-always@(posedge PIXEL_CLK) begin
-	if (HC_I > 799 || VC_I > 599) 
-		PIXEL_DATA <= 0;
-	else 
-		PIXEL_DATA <= VRAM[VC_I * HSIZE + HC_I];
+always@(posedge clk) begin
+	out <= in;
 end
 
-always@(posedge PIXEL_CLK) begin 
-	VRAM[PIX_VERTICAL * HSIZE + PIX_HORIZONTAL] <= PIX_COLOR;
-end
-*/
-
-
-assign PIXEL_DATA = color;
 endmodule

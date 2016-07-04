@@ -14,6 +14,9 @@ module TEST_VGA;
 	wire [2:0] Red;
 	wire [2:0] Green;
 	wire [1:0] Blue;
+	wire disp_en;
+	wire posX;
+	wire posY;
 
 	// Instantiate the Unit Under Test (UUT)
 	CTRL_CIRCUIT uut (
@@ -21,7 +24,10 @@ module TEST_VGA;
 		.PIX_DATA(PIX_DATA), 
 		.RST_IN(RST_IN), 
 		.HS(HS), 
-		.VS(VS), 
+		.VS(VS),
+		.disp_en(disp_en),
+		.posX(posX),
+		.posY(posY),
 		.Red(Red), 
 		.Green(Green), 
 		.Blue(Blue)

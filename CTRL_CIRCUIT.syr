@@ -112,8 +112,10 @@ Compiling verilog file "DCM75M.v" in library work
 Module <LATCH> compiled
 Compiling verilog file "HORIZ_CNT.v" in library work
 Module <DCM75M> compiled
-Compiling verilog file "CMP.v" in library work
+Compiling verilog file "FRAMEBUFFER.v" in library work
 Module <CNT> compiled
+Compiling verilog file "CMP.v" in library work
+Module <FRAMEBUFFER> compiled
 Compiling verilog file "CTRL_CIRCUIT.v" in library work
 Module <CMP> compiled
 Module <CTRL_CIRCUIT> compiled
@@ -141,6 +143,8 @@ Analyzing hierarchy for module <CTRL_CIRCUIT> in library <work> with parameters.
 
 Analyzing hierarchy for module <DCM75M> in library <work>.
 
+Analyzing hierarchy for module <FRAMEBUFFER> in library <work>.
+
 Analyzing hierarchy for module <CNT> in library <work> with parameters.
 	bitDim = "00000000000000000000000000001011"
 	pixWidth = "00000000000000000000011010011000"
@@ -151,7 +155,7 @@ Analyzing hierarchy for module <CMP> in library <work> with parameters.
 
 Analyzing hierarchy for module <CMP> in library <work> with parameters.
 	bitDim = "00000000000000000000000000001011"
-	toCmp = "00000000000000000000010100000000"
+	toCmp = "00000000000000000000000010010000"
 
 Analyzing hierarchy for module <LATCH> in library <work>.
 
@@ -161,7 +165,23 @@ Analyzing hierarchy for module <CNT> in library <work> with parameters.
 
 Analyzing hierarchy for module <CMP> in library <work> with parameters.
 	bitDim = "00000000000000000000000000001011"
-	toCmp = "00000000000000000000010000000000"
+	toCmp = "00000000000000000000000000000011"
+
+Analyzing hierarchy for module <CMP> in library <work> with parameters.
+	bitDim = "00000000000000000000000000001011"
+	toCmp = "00000000000000000000000010100000"
+
+Analyzing hierarchy for module <CMP> in library <work> with parameters.
+	bitDim = "00000000000000000000000000001011"
+	toCmp = "00000000000000000000010110100000"
+
+Analyzing hierarchy for module <CMP> in library <work> with parameters.
+	bitDim = "00000000000000000000000000001011"
+	toCmp = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <CMP> in library <work> with parameters.
+	bitDim = "00000000000000000000000000001011"
+	toCmp = "00000000000000000000010000000100"
 
 
 =========================================================================
@@ -201,6 +221,9 @@ Module <DCM75M> is correct for synthesis.
     Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <DCM75M>.
     Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <DCM75M>.
     Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <DCM75M>.
+Analyzing module <FRAMEBUFFER> in library <work>.
+Module <FRAMEBUFFER> is correct for synthesis.
+ 
 Analyzing module <CNT.1> in library <work>.
 	bitDim = 32'sb00000000000000000000000000001011
 	pixWidth = 32'sb00000000000000000000011010011000
@@ -213,7 +236,7 @@ Module <CMP.1> is correct for synthesis.
  
 Analyzing module <CMP.2> in library <work>.
 	bitDim = 32'sb00000000000000000000000000001011
-	toCmp = 32'sb00000000000000000000010100000000
+	toCmp = 32'sb00000000000000000000000010010000
 Module <CMP.2> is correct for synthesis.
  
 Analyzing module <LATCH> in library <work>.
@@ -226,8 +249,28 @@ Module <CNT.2> is correct for synthesis.
  
 Analyzing module <CMP.3> in library <work>.
 	bitDim = 32'sb00000000000000000000000000001011
-	toCmp = 32'sb00000000000000000000010000000000
+	toCmp = 32'sb00000000000000000000000000000011
 Module <CMP.3> is correct for synthesis.
+ 
+Analyzing module <CMP.4> in library <work>.
+	bitDim = 32'sb00000000000000000000000000001011
+	toCmp = 32'sb00000000000000000000000010100000
+Module <CMP.4> is correct for synthesis.
+ 
+Analyzing module <CMP.5> in library <work>.
+	bitDim = 32'sb00000000000000000000000000001011
+	toCmp = 32'sb00000000000000000000010110100000
+Module <CMP.5> is correct for synthesis.
+ 
+Analyzing module <CMP.6> in library <work>.
+	bitDim = 32'sb00000000000000000000000000001011
+	toCmp = 32'sb00000000000000000000000000000100
+Module <CMP.6> is correct for synthesis.
+ 
+Analyzing module <CMP.7> in library <work>.
+	bitDim = 32'sb00000000000000000000000000001011
+	toCmp = 32'sb00000000000000000000010000000100
+Module <CMP.7> is correct for synthesis.
  
 
 =========================================================================
@@ -235,6 +278,14 @@ Module <CMP.3> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
+
+Synthesizing Unit <FRAMEBUFFER>.
+    Related source file is "FRAMEBUFFER.v".
+    Found 8-bit register for signal <out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <FRAMEBUFFER> synthesized.
+
 
 Synthesizing Unit <CNT_1>.
     Related source file is "HORIZ_CNT.v".
@@ -277,6 +328,26 @@ Synthesizing Unit <CMP_3>.
 Unit <CMP_3> synthesized.
 
 
+Synthesizing Unit <CMP_4>.
+    Related source file is "CMP.v".
+Unit <CMP_4> synthesized.
+
+
+Synthesizing Unit <CMP_5>.
+    Related source file is "CMP.v".
+Unit <CMP_5> synthesized.
+
+
+Synthesizing Unit <CMP_6>.
+    Related source file is "CMP.v".
+Unit <CMP_6> synthesized.
+
+
+Synthesizing Unit <CMP_7>.
+    Related source file is "CMP.v".
+Unit <CMP_7> synthesized.
+
+
 Synthesizing Unit <DCM75M>.
     Related source file is "DCM75M.v".
 Unit <DCM75M> synthesized.
@@ -295,8 +366,10 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Latches                                              : 2
- 1-bit latch                                           : 2
+# Registers                                            : 1
+ 8-bit register                                        : 1
+# Latches                                              : 4
+ 1-bit latch                                           : 4
 # Comparators                                          : 2
  11-bit comparator greatequal                          : 2
 
@@ -313,8 +386,10 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  11-bit up counter                                     : 2
-# Latches                                              : 2
- 1-bit latch                                           : 2
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Latches                                              : 4
+ 1-bit latch                                           : 4
 # Comparators                                          : 2
  11-bit comparator greatequal                          : 2
 
@@ -326,6 +401,8 @@ Macro Statistics
 
 Optimizing unit <CTRL_CIRCUIT> ...
 
+Optimizing unit <FRAMEBUFFER> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block CTRL_CIRCUIT, actual ratio is 0.
@@ -336,8 +413,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 22
- Flip-Flops                                            : 22
+# Registers                                            : 30
+ Flip-Flops                                            : 30
 
 =========================================================================
 
@@ -363,29 +440,30 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 20
+# IOs                              : 22
 
 Cell Usage :
-# BELS                             : 108
+# BELS                             : 124
 #      GND                         : 1
-#      INV                         : 7
+#      INV                         : 9
 #      LUT1                        : 26
 #      LUT2                        : 5
-#      LUT3                        : 4
-#      LUT4                        : 7
+#      LUT3                        : 16
+#      LUT4                        : 9
 #      MUXCY                       : 34
 #      MUXF5                       : 1
 #      VCC                         : 1
 #      XORCY                       : 22
-# FlipFlops/Latches                : 24
+# FlipFlops/Latches                : 34
+#      FD                          : 8
 #      FDR                         : 22
-#      LDC                         : 2
+#      LDC                         : 4
 # Clock Buffers                    : 2
 #      BUFG                        : 2
-# IO Buffers                       : 20
+# IO Buffers                       : 22
 #      IBUF                        : 9
 #      IBUFG                       : 1
-#      OBUF                        : 10
+#      OBUF                        : 12
 # DCMs                             : 1
 #      DCM_SP                      : 1
 =========================================================================
@@ -395,11 +473,12 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       29  out of   4656     0%  
- Number of Slice Flip Flops:             24  out of   9312     0%  
- Number of 4 input LUTs:                 49  out of   9312     0%  
- Number of IOs:                          20
- Number of bonded IOBs:                  20  out of    232     8%  
+ Number of Slices:                       39  out of   4656     0%  
+ Number of Slice Flip Flops:             26  out of   9312     0%  
+ Number of 4 input LUTs:                 65  out of   9312     0%  
+ Number of IOs:                          22
+ Number of bonded IOBs:                  22  out of    232     9%  
+    IOB Flip Flops:                       8
  Number of GCLKs:                         2  out of     24     8%  
  Number of DCMs:                          1  out of      4    25%  
 
@@ -421,36 +500,40 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------+-----------------------------+-------+
-Clock Signal                         | Clock buffer(FF name)       | Load  |
--------------------------------------+-----------------------------+-------+
-latch_reset_v(syncDetectVert/out2:O) | NONE(*)(latchVert/q)        | 1     |
-latch_reset_h(syncDetectHoriz/out2:O)| NONE(*)(latchHoriz/q)       | 1     |
-latchHoriz/q                         | NONE(cntVert/CNT_0)         | 11    |
-CLKIN_IN                             | multiplier/DCM_SP_INST:CLKFX| 11    |
--------------------------------------+-----------------------------+-------+
-(*) These 2 clock signal(s) are generated by combinatorial logic,
+-------------------------------------------+-----------------------------+-------+
+Clock Signal                               | Clock buffer(FF name)       | Load  |
+-------------------------------------------+-----------------------------+-------+
+latch_reset_viz_v(visibleDetectVert/out1:O)| NONE(*)(latchVisibleVert/q) | 1     |
+latch_reset_viz_h(visibleDetectHoriz/out:O)| NONE(*)(latchVisibleHoriz/q)| 1     |
+latch_reset_v(syncDetectVert/out_f5:O)     | NONE(*)(latchVert/q)        | 1     |
+latch_reset_h(syncDetectHoriz/out1:O)      | NONE(*)(latchHoriz/q)       | 1     |
+latchHoriz/q                               | NONE(cntVert/CNT_0)         | 11    |
+CLKIN_IN                                   | multiplier/DCM_SP_INST:CLKFX| 19    |
+-------------------------------------------+-----------------------------+-------+
+(*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------+-------+
-Control Signal                     | Buffer(FF name)        | Load  |
------------------------------------+------------------------+-------+
-latch_set_h(zeroDetectHoriz/out1:O)| NONE(latchHoriz/q)     | 1     |
-latch_set_v(zeroDetectVert/out1:O) | NONE(latchVert/q)      | 1     |
------------------------------------+------------------------+-------+
+-------------------------------------+--------------------------+-------+
+Control Signal                       | Buffer(FF name)          | Load  |
+-------------------------------------+--------------------------+-------+
+latch_set_h(zeroDetectHoriz/out1:O)  | NONE(latchHoriz/q)       | 1     |
+latch_set_v(zeroDetectVert/out1:O)   | NONE(latchVert/q)        | 1     |
+latch_set_viz_h(fpDetectHoriz/out2:O)| NONE(latchVisibleHoriz/q)| 1     |
+latch_set_viz_v(fpDetectVert/out2:O) | NONE(latchVisibleVert/q) | 1     |
+-------------------------------------+--------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 14.624ns (Maximum Frequency: 68.379MHz)
+   Minimum period: 14.663ns (Maximum Frequency: 68.199MHz)
    Minimum input arrival time before clock: 3.838ns
    Maximum output required time after clock: 5.543ns
-   Maximum combinational path delay: 4.632ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
@@ -458,10 +541,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'latchHoriz/q'
-  Clock period: 5.416ns (frequency: 184.624MHz)
+  Clock period: 5.464ns (frequency: 183.016MHz)
   Total number of paths / destination ports: 187 / 22
 -------------------------------------------------------------------------
-Delay:               5.416ns (Levels of Logic = 9)
+Delay:               5.464ns (Levels of Logic = 9)
   Source:            cntVert/CNT_0 (FF)
   Destination:       cntVert/CNT_0 (FF)
   Source Clock:      latchHoriz/q rising
@@ -471,7 +554,7 @@ Delay:               5.416ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.514   0.603  cntVert/CNT_0 (cntVert/CNT_0)
+     FDR:C->Q              4   0.514   0.651  cntVert/CNT_0 (cntVert/CNT_0)
      LUT1:I0->O            1   0.612   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<0>_rt (cntVert/Mcompar_CNT_cmp_ge0000_cy<0>_rt)
      MUXCY:S->O            1   0.404   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<0> (cntVert/Mcompar_CNT_cmp_ge0000_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  cntVert/Mcompar_CNT_cmp_ge0000_cy<1> (cntVert/Mcompar_CNT_cmp_ge0000_cy<1>)
@@ -483,29 +566,27 @@ Delay:               5.416ns (Levels of Logic = 9)
      LUT2:I1->O           11   0.612   0.793  cntVert/CNT_or00001 (cntVert/CNT_or0000)
      FDR:R                     0.795          cntVert/CNT_0
     ----------------------------------------
-    Total                      5.416ns (3.594ns logic, 1.822ns route)
-                                       (66.4% logic, 33.6% route)
+    Total                      5.464ns (3.594ns logic, 1.870ns route)
+                                       (65.8% logic, 34.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLKIN_IN'
-  Clock period: 14.624ns (frequency: 68.379MHz)
+  Clock period: 14.663ns (frequency: 68.199MHz)
   Total number of paths / destination ports: 187 / 22
 -------------------------------------------------------------------------
-Delay:               5.416ns (Levels of Logic = 9)
-  Source:            cntHoriz/CNT_0 (FF)
+Delay:               5.431ns (Levels of Logic = 7)
+  Source:            cntHoriz/CNT_4 (FF)
   Destination:       cntHoriz/CNT_0 (FF)
   Source Clock:      CLKIN_IN rising 2.7X
   Destination Clock: CLKIN_IN rising 2.7X
 
-  Data Path: cntHoriz/CNT_0 to cntHoriz/CNT_0
+  Data Path: cntHoriz/CNT_4 to cntHoriz/CNT_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.514   0.603  cntHoriz/CNT_0 (cntHoriz/CNT_0)
-     LUT3:I0->O            1   0.612   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_lut<0> (cntHoriz/Mcompar_CNT_cmp_ge0000_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<0> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<1> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2>)
+     FDR:C->Q              6   0.514   0.721  cntHoriz/CNT_4 (cntHoriz/CNT_4)
+     LUT1:I0->O            1   0.612   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2>_rt (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2>_rt)
+     MUXCY:S->O            1   0.404   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<2>)
      MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<3> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<3>)
      MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<4> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<4>)
      MUXCY:CI->O           1   0.052   0.000  cntHoriz/Mcompar_CNT_cmp_ge0000_cy<5> (cntHoriz/Mcompar_CNT_cmp_ge0000_cy<5>)
@@ -513,8 +594,8 @@ Delay:               5.416ns (Levels of Logic = 9)
      LUT2:I1->O           11   0.612   0.793  cntHoriz/CNT_or00001 (cntHoriz/CNT_or0000)
      FDR:R                     0.795          cntHoriz/CNT_0
     ----------------------------------------
-    Total                      5.416ns (3.594ns logic, 1.822ns route)
-                                       (66.4% logic, 33.6% route)
+    Total                      5.431ns (3.491ns logic, 1.940ns route)
+                                       (64.3% logic, 35.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'latchHoriz/q'
@@ -538,7 +619,7 @@ Offset:              3.838ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLKIN_IN'
-  Total number of paths / destination ports: 11 / 11
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
 Offset:              3.838ns (Levels of Logic = 2)
   Source:            RST_IN (PAD)
@@ -555,6 +636,46 @@ Offset:              3.838ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      3.838ns (2.513ns logic, 1.325ns route)
                                        (65.5% logic, 34.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'latch_reset_viz_h'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.492ns (Levels of Logic = 2)
+  Source:            latchVisibleHoriz/q (LATCH)
+  Destination:       Blue<1> (PAD)
+  Source Clock:      latch_reset_viz_h falling
+
+  Data Path: latchVisibleHoriz/q to Blue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              9   0.588   0.766  latchVisibleHoriz/q (latchVisibleHoriz/q)
+     LUT3:I1->O            1   0.612   0.357  Red<2>1 (Red_2_OBUF)
+     OBUF:I->O                 3.169          Red_2_OBUF (Red<2>)
+    ----------------------------------------
+    Total                      5.492ns (4.369ns logic, 1.123ns route)
+                                       (79.6% logic, 20.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'latch_reset_viz_v'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              5.453ns (Levels of Logic = 2)
+  Source:            latchVisibleVert/q (LATCH)
+  Destination:       Blue<1> (PAD)
+  Source Clock:      latch_reset_viz_v falling
+
+  Data Path: latchVisibleVert/q to Blue<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              9   0.588   0.727  latchVisibleVert/q (latchVisibleVert/q)
+     LUT3:I2->O            1   0.612   0.357  Red<2>1 (Red_2_OBUF)
+     OBUF:I->O                 3.169          Red_2_OBUF (Red<2>)
+    ----------------------------------------
+    Total                      5.453ns (4.369ns logic, 1.084ns route)
+                                       (80.1% logic, 19.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'latch_reset_h'
@@ -597,33 +718,35 @@ Offset:              5.083ns (Levels of Logic = 2)
                                        (86.0% logic, 14.0% route)
 
 =========================================================================
-Timing constraint: Default path analysis
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLKIN_IN'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Delay:               4.632ns (Levels of Logic = 2)
-  Source:            PIX_DATA<7> (PAD)
+Offset:              5.161ns (Levels of Logic = 2)
+  Source:            framebuffer/out_7 (FF)
   Destination:       Blue<1> (PAD)
+  Source Clock:      CLKIN_IN rising 2.7X
 
-  Data Path: PIX_DATA<7> to Blue<1>
+  Data Path: framebuffer/out_7 to Blue<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.357  PIX_DATA_7_IBUF (Blue_1_OBUF)
+     FD:C->Q               1   0.514   0.509  framebuffer/out_7 (framebuffer/out_7)
+     LUT3:I0->O            1   0.612   0.357  Blue<1>1 (Blue_1_OBUF)
      OBUF:I->O                 3.169          Blue_1_OBUF (Blue<1>)
     ----------------------------------------
-    Total                      4.632ns (4.275ns logic, 0.357ns route)
-                                       (92.3% logic, 7.7% route)
+    Total                      5.161ns (4.295ns logic, 0.866ns route)
+                                       (83.2% logic, 16.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 2.81 secs
+Total CPU time to Xst completion: 2.84 secs
  
 --> 
 
 
-Total memory usage is 521460 kilobytes
+Total memory usage is 522688 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

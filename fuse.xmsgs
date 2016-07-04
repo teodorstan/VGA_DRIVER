@@ -5,5 +5,14 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/student/VGA_DRIVER/CTRL_CIRCUIT.v" Line 37: Redeclaration of ansi port <arg fmt="%s" index="1">PIX_DATA</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/student/VGA_DRIVER/TEST_VGA.v" Line 29: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">posX</arg>&gt;. Formal port size is <arg fmt="%d" index="2">12</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/student/VGA_DRIVER/TEST_VGA.v" Line 30: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">posY</arg>&gt;. Formal port size is <arg fmt="%d" index="2">12</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
 </messages>
 

@@ -1,5 +1,6 @@
 verilog work "LATCH.v"
 verilog work "DCM75M.v"
 verilog work "HORIZ_CNT.v"
+verilog work "FRAMEBUFFER.v"
 verilog work "CMP.v"
 verilog work "CTRL_CIRCUIT.v"
